@@ -1,17 +1,16 @@
 'use strict';
-module.exports = function(){
+function VaultGenerator(){
 
   const vault = {};
 
   function setValue(key, value){
 
     vault[key] = value;
-    return vault[key];
   }
 
   function getValue(key){
-
-    if (key === undefined | vault[key] === undefined){
+    //if(vault.hasOwnProperty(key) !== true) REDO THIS PART!!!!!!!
+    if (vault.hasOwnProperty(key) === false){
       return null;
     }else{
       return vault[key];
@@ -25,4 +24,10 @@ module.exports = function(){
 
 
 };
+module.exports = VaultGenerator;
+
+
+var vault = VaultGenerator();
+vault.setValue("password", "john");
+console.log(vault);
 
