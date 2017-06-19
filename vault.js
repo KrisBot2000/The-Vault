@@ -9,8 +9,7 @@ function VaultGenerator(){
   }
 
   function getValue(key){
-    //if(vault.hasOwnProperty(key) !== true) REDO THIS PART!!!!!!!
-    if (vault.hasOwnProperty(key) === false){
+    if (vault.hasOwnProperty(key) !== true){
       return null;
     }else{
       return vault[key];
