@@ -20,11 +20,9 @@ function VaultGenerator(){
     setValue: setValue,
     getValue: getValue
   }
-
-
 };
-module.exports = VaultGenerator;
 
+module.exports = VaultGenerator;
 
 var vault = VaultGenerator();
 vault.setValue("password", "john");
